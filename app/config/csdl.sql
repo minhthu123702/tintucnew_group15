@@ -1,4 +1,4 @@
---csdl
+--csdl tin tức
 CREATE DATABASE tintuc;
 USE tintuc;
 CREATE TABLE users (

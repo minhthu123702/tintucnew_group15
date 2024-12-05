@@ -1,4 +1,5 @@
 <?php
+//ket noi
     $servername = "localhost";
     $username = "root";
     $password = "";

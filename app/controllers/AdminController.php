@@ -1,6 +1,6 @@
 
 <?php
-require_once __DIR__ . '/../model/AdminModel.php';
+require_once __DIR__ . '/../models/User.php';
 class AdminController{
     //Requied index
     public function index(){

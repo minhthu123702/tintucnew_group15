@@ -1,40 +1,14 @@
-
 <?php
-//ket noi
-include_once 'config.php';
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tlunews";
 
-class DBConnection {
-    private $host;
-    private $user;
-    private $pass;
-    private $dbname;
-    private $conn;
-    public function __construct() {
-        $this->host = DB_HOST;
-        $this->user = DB_USER;
-        $this->pass = DB_PASS;
-        $this->dbname = DB_NAME;
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-        try {
-    
-            $this->conn = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->pass);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            $this->conn = null;
-            echo "Connection failed: " . $e->getMessage();
-        }
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-
-    public function getConnection() {
-        return $this->conn;
-    }
-}
-$db = new DBConnection();
-$conn = $db->getConnection();
-if ($conn) {
-    echo "Kết nối cơ sở dữ liệu thành công!";
-} else {
-    echo "Kết nối thất bại!";
-}
 ?>
-

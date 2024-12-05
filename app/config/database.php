@@ -1,4 +1,6 @@
+
 <?php
+//ket noi
 include_once 'config.php';
 
 class DBConnection {

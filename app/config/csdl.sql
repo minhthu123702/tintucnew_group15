@@ -1,3 +1,4 @@
+--csdl
 CREATE DATABASE tintuc;
 USE tintuc;
 CREATE TABLE users (

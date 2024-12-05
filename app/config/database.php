@@ -1,4 +1,6 @@
+
 <?php
+//ket noi
 include_once 'config.php';
 
 class DBConnection {
@@ -35,3 +37,4 @@ if ($conn) {
     echo "Kết nối thất bại!";
 }
 ?>
+
